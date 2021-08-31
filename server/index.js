@@ -21,7 +21,7 @@ const app = express();
 const port = process.env.PORT || 8000;
 
 // connect to mongodb
-const dbURI = "mongodb+srv://user0:user0@cluster0.pq8gs.mongodb.net/database0?retryWrites=true&w=majority";
+const dbURI = "mongodb+srv://user0:user0@cluster0.j2v4j.mongodb.net/database0?retryWrites=true&w=majority";
 mongoose.connect(dbURI, {useNewUrlParser: true, useUnifiedTopology: true})
 .then((result) => console.log('connected to db'))
 .catch((err) => console.log(err));
@@ -96,7 +96,7 @@ app.get('/', function (req, res) {
 
 // post, get form data from frontend
 // save new user to DB
-// first time run it will auto create a new collection name 'users' similar to our model name 'User'
+// first time run it will auto create a new collection name 'users' plural form of our model name 'User'
 // to save new data I user 2 steps way, create a new model object and than save
 app.post('/save-user', async (req, res) => {
     req.setTimeout(0);
